@@ -3,7 +3,6 @@ from kafka import KafkaProducer
 import time
 producer = KafkaProducer(bootstrap_servers='localhost:9092')
 while True :
-    t = str(time.time())
-    producer.send('input', t )
+    producer.send('input', bytes(str(time.time()) , 'utf-8'))
     time.sleep(1)
 
