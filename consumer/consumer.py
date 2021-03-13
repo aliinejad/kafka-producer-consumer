@@ -3,9 +3,9 @@ from kafka import KafkaProducer
 import time 
 
 
-consumer = KafkaConsumer (bootstrap_servers = 'localhost:9092')
+consumer = KafkaConsumer (bootstrap_servers = 'kafka-service:9092')
 consumer.subscribe(['input'])
-producer = KafkaProducer(bootstrap_servers='localhost:9092')
+producer = KafkaProducer(bootstrap_servers='kafka-service:9092')
 
 for msg in consumer:
      epoch_time = msg.value
