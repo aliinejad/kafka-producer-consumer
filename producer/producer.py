@@ -1,4 +1,3 @@
- 
 from kafka import KafkaProducer
 import time
 producer = KafkaProducer(bootstrap_servers='localhost:9092')
