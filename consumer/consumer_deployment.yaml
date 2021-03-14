@@ -17,4 +17,5 @@ spec:
       containers:
       - name: consumer
         image: consumer
+        imagePullPolicy: Never
 
