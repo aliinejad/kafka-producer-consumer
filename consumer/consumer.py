@@ -6,9 +6,9 @@ import os
 key = "KAFKA_SERVICE_NAME"
 kafka = os.getenv(key)
 
-consumer = KafkaConsumer (bootstrap_servers = f'{kafka}:9092'))
+consumer = KafkaConsumer (bootstrap_servers = f'{kafka}:9092')
 consumer.subscribe(['input'])
-producer = KafkaProducer(bootstrap_servers = f'{kafka}:9092') )
+producer = KafkaProducer(bootstrap_servers = f'{kafka}:9092')
 
 for msg in consumer:
      epoch_time = msg.value
