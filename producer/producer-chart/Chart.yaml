@@ -2,6 +2,12 @@ apiVersion: v2
 name: producer-chart
 description: A Helm chart for Kubernetes
 
+
+dependencies:
+  - name: kafka
+    repository: file://../kafka
+
+
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
