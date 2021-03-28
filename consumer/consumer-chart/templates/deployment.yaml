@@ -35,7 +35,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: KAFKA_SERVICE_NAME
-              value: {{ include "consumer.kafka.fullname" . | quote }}
+              value: "producer-kafka"
+
+
 
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
