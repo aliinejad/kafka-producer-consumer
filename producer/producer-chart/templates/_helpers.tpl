@@ -60,3 +60,11 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+
+
+
+{{- define "producer-chart.kafkaHost" -}}
+    {{- printf "%s" (include "kafka.fullname" .) -}}
+{{- end -}}
+
