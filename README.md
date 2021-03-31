@@ -12,3 +12,8 @@ this is consumer and producer program in python programming language
   - then install consumer helm chart with kafkahost flag 
 
 
+```console
+helm install producer ./producer/producer-chart
+
+helm install consumer ./consumer/consumer-chart --set kafkahost=producer-kafka
+```
