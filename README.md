@@ -17,5 +17,5 @@ helm install producer ./producer/producer-chart
 
 helm install consumer ./consumer/consumer-chart --set kafkahost=producer-kafka
 
-kafkahost = <producer chart name > + -kafka
+kafkahost = < producer chart name > + -kafka
 ```
