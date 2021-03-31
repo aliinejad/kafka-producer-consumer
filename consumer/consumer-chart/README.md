@@ -13,5 +13,9 @@ this chart run consumer app that reads from 'input' topic in kafka and transform
 ## TL;DR
 
 ```console
-helm install consumer ./consumer/consumer-chart --set kafkahost=<producer-cahrt name>-kafka
+helm install < chart name > < chart path > --set kafkahost=<producer-cahrt name>-kafka
+
+## example
+
+helm install consumer ./consumer/consumer-chart --set kafkahost=producer-kafka
 ```
