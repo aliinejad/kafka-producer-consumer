@@ -16,5 +16,5 @@ p = Counter('produced_massage ', 'Description of counter')
 for msg in consumer:
      epoch_time = msg.value
      standard_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(float(epoch_time)))
-     producer.send('output', bytes(standard_time , 'utf-8') )
+     producer.send('output', standard_time.encode("utf-8") )
      p.inc()
