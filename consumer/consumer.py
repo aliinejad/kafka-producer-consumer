@@ -11,7 +11,7 @@ consumer = KafkaConsumer (bootstrap_servers = f'{kafka}:9092')
 consumer.subscribe(['input'])
 producer = KafkaProducer(bootstrap_servers = f'{kafka}:9092')
 start_http_server(8000)
-p = Counter('produced_massage ', 'Description of counter')
+p = Counter('produce_massage', 'Description of counter')
 
 for msg in consumer:
      epoch_time = msg.value
