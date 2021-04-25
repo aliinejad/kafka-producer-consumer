@@ -13,4 +13,6 @@ while True :
     t = str(time.time())
     producer.send('input', t.encode("utf-8") )
     time.sleep(1)
+    c.inc()
+
 
